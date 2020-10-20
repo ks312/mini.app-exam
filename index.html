@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1c528de8a4.js" crossorigin="anonymous"></script>
+   
+    <title>Student MiniApp</title>
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
+    <div class="container">
+    <a class="navbar-brand" href="#">Student Management MiniApp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="about.html">About</a>
+        </div>
+    </div>
+</div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Student Management <br>MiniApp</h1>
+    </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+        <div class="col">
+            <h4>Add Student</h4><br>
+            <!-- <button type="button" id="addNew" class="btn btn-success">Show Form Add New Student<button><br><br>   -->
+                <form id="formAddNew">
+            <label for="idNim">Student ID (NIM)</label><br>
+                <input type="text" id="idNIM"><br>
+            <label for="fullName">Full Name</label><br>
+                <input type="text" id="fullName"><br><br>
+            <label for="gender">Gender</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br><br>
+            <label for="faculty">Faculty</label><br>
+            <select id="facultyList">
+                <option value=""selected>--SELECT FACULTY--</option>
+                <option value="pascasarjana">Pascasarjana</option>
+                <option value="filsafat">Fakultas Filsafat</option>
+                <option value="fkip">Fakultas Keguruan dan Ilmu Pendidikan</option>
+                <option value="fekon">Fakultas Ekonomi dan Bisnis</option>
+                <option value="fp">Fakultas Pertanian</option>
+                <option value="fik">Fakultas Ilmu Komputer</option>
+                <option value="fkep">Fakultas Keperawatan</option>
+                <option value="asmi">Akademi Sekretari Manajemen Indonesia Klabat</option>
+            </select><br>
+            <label for="programStudy">Program of Study</label><br> 
+            <select id="programOfStudyList">
+                <option value=""selected disabled>--SELECT PROGRAM OF STUDY--</option>
+            </select><br><br>
+            <input type="sumbit" value="Add Student" class="btn btn-success">
+        </form>
+            
+        </div>
+            <div class="col">
+            <h4>Filter Students By</h4><br>
+            <label for="faculty">Faculty</label><br>
+            <select id="facultyList">
+            <option value=""selected>--SELECT FACULTY--</option>
+            </select><br><br>
+            <input type="submit" value="Show Students" class="btn btn-success"><br>
+            <label for="programstudy">Program of Study</label><br>
+            <select id="prodiList">
+            <option value=""selected>--SELECT PROGRAM OF STUDY--</option>
+            </select><br><br>
+            <input type="submit" value="Show Students" class="btn btn-success">
+        </div>
+    </div>
+    <table class="table table-striped mt-5">
+        <tbody id="student-list"></tbody>
+        <thead>
+            <tr>
+                <th>Student ID(NIM)</th>
+                <th>Full Name</th>
+                <th>Gender</th>
+                <th>Faculty</th>
+                <th>Program of Study</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table> 
+</div>
+    
+<script src="app.js"></script>
+
+</body>
+</html>
